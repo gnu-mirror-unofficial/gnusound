@@ -1,0 +1,624 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<article>
+  <articleinfo>
+    <date>2003-04-01</date>
+    <title>GNUsound manual</title>
+    <authorgroup>
+      <author>
+        <firstname>Pascal</firstname><surname>Haakmat</surname>
+      </author>
+    </authorgroup>
+    <copyright>
+      <year>2002</year>
+      <year>2003</year>
+      <year>2004</year>
+      <holder>Pascal Haakmat</holder>
+    </copyright>
+    <revhistory>
+      <revision>
+        <revnumber>0</revnumber>
+        <date>April 2003</date>
+        <authorinitials>ph</authorinitials>
+        <revremark>Initial revision (GNUsound 0.60 release).</revremark>
+      </revision>
+      <revision>
+        <revnumber>1</revnumber>
+        <date>January 2004</date>
+        <authorinitials>ph</authorinitials>
+        <revremark>Updates (GNUsound 0.6.2 release).</revremark>
+      </revision>
+    </revhistory>
+  </articleinfo>
+  <sect1 id="about">
+    <title>About</title>
+    
+    <sect2 id="about-gnusound">
+      <title>About GNUsound</title>
+      
+      <para>Oi babes. GNUsound is a powerful sound editor for
+            GNOME. GNUsound wants to be reliable, fast, and uncomplicated
+      and it's using me as a tool to get it there. GNUsound is always
+      looking to expand it's toolset, so if you want to slave the
+      night away for no pay under an unforgiving master, <link
+      linkend="contact">drop me a note</link> and I'll hook you
+      up.</para>
+
+      <para>I won't claim that GNUsound will change the way you work
+      because I am a reactionary bastard who thinks most change is
+      bunk<footnote><blockquote><attribution>Conquest's
+      law</attribution>
+      <para>Everyone is a reactionary about subjects he
+      understands.</para></blockquote></footnote>. As far as I am concerned
+      software should bend over backwards to accomodate the way I
+      work, so in general, I don't like software that promises to
+      revolutionize the way I work. Especially if that software then
+      doesn't even compile or is so clumsy as to be practically
+      useless.</para>
+
+      <para>With GNUsound I wanted to create a very practical program
+      to address some very immediate needs and wants. So rather than
+      following a strictly hierarchical software development approach
+      where development starts with a lot of plumbing and then
+      proceeds upward until the program is finished, GNUsound
+      development has followed a more vertically aligned,
+      goal-oriented strategy. In this way I've tried to avoid the
+      danger -- especially present with volunteer-based projects such
+      as GNUsound -- that the project never leaves the plumbing stage
+      or that when it does, there is not enough energy left to tackle
+      the upper layers and to work on actual usability (let's call it
+      the Sourceforge syndrome). I think that strategy has played out
+      well.</para>
+      
+      <para>GNUsound is not for everyone. It needs lots of memory to
+      perform well. In some cases, it may trade audio quality for
+      speed (although it will usually warn you when that is the
+      case). And it's not finished.</para>
+
+    </sect2>
+    <sect2 id="about-documentation">
+      <title>About this documentation</title>
+      
+      <para>I don't want to spend a lot of time writing documentation
+      because I have other things to do and nobody reads documentation
+      anyways. Besides, I am of the opinion that a program should not
+      need a lot of documentation. It should allow the user to explore
+      and discover the functionality without exploding whenever the
+      user makes a mistake. So there you go. But I'll try and use this
+      space to explain how things work and why. </para>
+
+    </sect2>
+  </sect1>
+  <sect1 id="using">
+    <title>Using GNUsound</title> 
+    <sect2 id="installation">
+      <title>Installation</title>
+    
+      <para>GNUsound can be installed with little pain on most GNOME 1
+      or GNOME 2 installations.</para>
+    
+      <sect3 id="prerequisites">
+        <title>Prerequisites</title>
+      
+        <para>It is recommended/required that you install the
+        following software before compiling/installing GNUsound:</para>
+      
+        <itemizedlist>
+          <listitem><para>Linux &gt;= 2.4</para></listitem>
+          <listitem><para>GNOME &gt;= 1.4</para></listitem>
+          <listitem><para>libglade &gt;= 0.14</para></listitem>
+          <listitem><para>libaudiofile &gt;= 0.2.3</para></listitem>
+          <listitem><para>libsamplerate &gt;= 0.13</para></listitem>
+          <listitem><para>OSS compatible sound driver</para></listitem>
+        </itemizedlist>
+        
+        <para>In addition, it is recommended that you use reasonably
+        fast hardware (say, a 500 MHz PIII) and install lots of RAM
+        (really).</para>
+      
+      </sect3>
+      <sect3 id="installing-source">
+        <title>Installing from source</title>
+      
+        <para>To install GNUsound from source try:</para>
+      
+        <screen>
+<prompt>$</prompt> <userinput>./configure --enable-optimization</userinput>
+<prompt>$</prompt> <userinput>make</userinput>
+<prompt>$</prompt> <userinput>make install</userinput>
+</screen>
+        
+        <para>Don't forget that
+        <screen><prompt>$</prompt> <userinput>./configure --help</userinput></screen> 
+        shows further configuration
+        options. If you decide to uninstall GNUsound, you can issue
+        the command:</para>
+        
+        <screen>
+<prompt>$</prompt> <userinput>make uninstall</userinput>
+</screen>
+        
+        <para>Considerable effort has been expended trying to make
+        GNUsound compile and install flawlessly on many different
+        systems, but it is still possible that something doesn't work
+        for you. In that case, please <link linkend="contact">report
+        it</link>.</para>
+        
+      </sect3>
+      <sect3 id="installing-binary">
+        <title>Installing from binary packages</title>
+        
+        <para>Several people provide binary packages of GNUsound for a
+        number of distributions. These are available from <ulink
+        url="http://awacs.dhs.org/software/gnusound">the GNUsound
+        homepage</ulink>.</para>
+        
+      </sect3>
+    </sect2>
+    <sect2 id="starting">
+      <title>Starting GNUsound</title> 
+      
+      <para>If installation has been successful, there should be a
+      GNUsound icon in your GNOME menus. Alternatively you can start
+      GNUsound from the command line:</para>
+      
+      <screen>
+<prompt>$</prompt> <userinput>gnusound</userinput>
+</screen>
+
+      <para>This latter method is actually recommended (at least for
+      the time being), because GNUsound spews copious output to the
+      screen, including some error messages that haven't found a place
+      in the GUI yet (such as when GNUsound cannot open the audio
+      device).</para>
+
+      <para>If you run into problems, e.g. GNUsound won't start, or it
+      crashes immediately after startup, see the <link
+      linkend="installation">installation section</link> and read the
+      output from 
+      <screen><prompt>$ </prompt><userinput>./configure --help</userinput></screen></para>
+
+    </sect2> 
+
+    <sect2 id="loading">
+        <title>Loading files</title>
+        
+        <para>GNUsound uses <systemitem>libaudiofile</systemitem>,
+        which is a part of <systemitem>GNOME</systemitem>, to provide
+        support for a number of popular audio file formats such as
+        .AIFF and .WAV.</para>
+
+    </sect2>
+
+    <sect2 id="viewing">
+    <title>Viewing</title>
+    <para>One of the most important design goals of GNUsound is to
+        provide very fast waveform display, to prevent navigating
+        through the soundfile from becoming a chore and to avoid (or
+        postpone) the need for complicated navigation tools.</para>
+
+    <para>The most important viewing tool is the zoom function. You
+        can zoom in and out using the PageUp and PageDown keys. If you
+        have a mousewheel, then you can also use the mousewheel to
+        zoom in and out.</para>
+
+    <para>The <guimenu>View</guimenu> menu provides some options to
+        control the view, from preset zoom factors to
+        enabling/disabling grid display.</para>
+
+    </sect2>      
+    <sect2 id="selection">
+      <title>Selection</title>
+        
+        <para>You can create a selection on a track by dragging the
+        mouse pointer over the region that you wish to select, or by
+        holding the SHIFT key and giving one of the movement commands
+        in the <guimenu>Select</guimenu> menu. You can select
+        multiple tracks by holding the CONTROL key while clicking on
+        the tracks that you want to select. If a track is already
+        selected, then this action deselects the given track. It is
+        also possible to select multiple tracks by issuing the
+        <guimenuitem>Track Up</guimenuitem> and <guimenuitem>Track
+        Down</guimenuitem> commands from the
+        <guimenu>Select</guimenu> menu.</para>
+        
+        <para>Changes to the selection are undoable, thus, if you make
+        a mistake which causes you to lose an important selection, you
+        can issue the <guimenuitem>Undo</guimenuitem> command to get
+        your selection back.</para>
+        
+        <para>A handy trick to temporarily save a selection that you
+        don't want to lose while you do some editing elsewhere is to
+        turn the current selection into a loop, then do your stuff,
+        and then to select the loop when you're done. Alternatively,
+        you can set cuepoints to demarcate the selection that you want
+        to save, then use
+        <guimenuitem>Snap to Cuepoints</guimenuitem> and the
+        <guimenuitem>Move Left</guimenuitem> and <guimenuitem>Move
+        Right</guimenuitem> commands to get your selection back.</para>
+        
+    </sect2>
+    <sect2 id="markers">
+      <title>Markers</title>
+      <sect3 id="cuepoints">
+        <title>Cuepoints</title>
+          
+          <para>Cuepoints are markers that you can attach to the
+          soundfile. By double-clicking on the little red triangle you
+          can change the label for a marker.</para>
+
+          <para>You can create cuepoints by pressing M or by selecting
+          the corresponding option from the
+          <guimenu>Marker</guimenu> menu. If there is no
+          selection, this command creates a single marker at the
+          cursor position. If there is a selection, then this command
+          creates 2 markers, at the left and right positions of the
+          selection.</para>
+
+      </sect3>
+      <sect3 id="envelopes">
+        <title>Envelopes</title>
+          
+          <para>GNUsound is either in selection editing mode or in
+          envelope editing mode. You can switch between these modes by
+          toggling the <guimenuitem>Envelope Edit</guimenuitem> setting
+          under the <guimenu>Edit</guimenu> menu.  </para>
+          
+          <para>Once in envelope mode, you can click on a track to
+          create envelope handles. Clicking on the envelope handles
+          themselves allows you to move them around. GNUsound provides
+          two different envelopes for controlling two different
+          parameters: the primary and the auxiliary envelope. Holding
+          CONTROL while clicking on a track allows you to edit the
+          auxiliary envelope.</para>
+          
+          <para>Envelopes modify the behavior of the tools that you
+          apply to the selection. For example if you create a
+          selection, then draw an envelope across the selection that
+          slopes downward from the center, and then apply the
+          <guimenuitem>Amplify</guimenuitem> tool (from the
+          <guimenuitem>Tools</guimenuitem> menu), it will make the sound
+          softer. Thus, the envelope controls the gain parameter of
+          the <guimenuitem>Amplify</guimenuitem> tool. </para>
+          
+          <para>The exact effect of an envelope depends on the
+          selected tool; some tools don't have any parameters to
+          change, and the envelopes will have no effect. For other
+          tools, the primary envelope usually controls the first
+          parameter, and the auxiliary envelope controls the second
+          parameter. For yet other tools, it may be possible to
+          explicitly assign a parameter to one of the two
+          envelopes.</para>
+          
+          <para>It is possible to temporarily disable envelopes by
+          issuing the <guimenuitem>Show Envelopes</guimenuitem>
+          command. The envelopes will then become invisible and they
+          will no longer affect any tools that you use.</para> 
+      </sect3>
+    </sect2>
+
+    <sect2 id="playback">
+      <title>Playback</title>
+      <para>GNUsound can playback as many tracks as your hardware can
+      handle. Every track can be mixed onto as many output channels as
+      desired, using the mixer level controls (the rainbow colored
+      things).</para>
+
+      <para>GNUsound does not perform any implicit transformations of
+      the audio file on playback<footnote><para>There is one
+      exception: GNUsound can convert signed 8 bit samples to unsigned
+      8 bit samples for drivers/devices that do not support signed 8
+      bit output. Whether GNUsound does this is controlled by the
+      playback_signed_int8_to_unsigned_int8 parameter in <link
+      linkend="configfile">the configuration
+      file</link>.</para></footnote>it just tries to open the audio
+      device with the same parameters as the audio file (number of
+      bits, sample rate) and starts playback. You should check
+      GNUsound's output for any warnings (e.g. when the device could
+      not be openend, or when the audio device can't support the
+      requested sample rate -- these warnings do not appear in the GUI
+      yet).</para>
+
+      <para>GNUsound does not perform any checking on output clipping:
+      it is your responsibility to make sure you don't mix two
+      channels too loudly.</para>
+
+    </sect2>
+    <sect2 id="record">
+      <title>Recording</title>
+      <para>GNUsound can record as many tracks simultaneously as
+      your hardware will bear. You do this by selecting the tracks
+      you wish to record on and issuing the
+      <guimenuitem>Record</guimenuitem> command.</para>
+
+      <para>There is no relation between which tracks are selected
+      and which input channels are actually recorded except for the
+      number of channels: that is, if you select tracks 1 and 3 and
+      then start to record, track 1 will receive the first input
+      channel, and track 3 will receive the second input
+      channel.</para>
+
+      <para>There is currently no way to explicitly control which
+      input channels GNUsound records from. GNUsound will always
+      incrementally assign the available input channels to the
+      selected tracks. If there is one selected track, GNUsound
+      records from the first available input channel, if there are
+      two selected tracks, GNUsound records from the first two input
+      channels, etcetera.</para>
+    </sect2>      
+      
+    <sect2 id="saving">
+      <title>Saving files</title>
+      
+      <para>You can issue the <guimenuitem>Save</guimenuitem>
+        command at almost any time. Files are saved in the
+        background and it is possible to perform almost any
+        operation during a file save, including playback (although
+        playback may stutter depending on your system
+        configuration). Files are always saved in the .WAV
+        format. Envelopes, cuepoints and other data are saved in a
+        <link
+        linkend="usxfile"><replaceable>filename</replaceable>.usx
+        file</link>, in a fairly self-explanatory text
+        format.</para>
+      
+    </sect2>
+
+    <sect2 id="memory">
+      <title>Memory management</title>
+      <para>GNUsound currently stores all its data, including
+      clipboard and undo buffers, in memory. Ultimately some logic
+      will be implemented to offload portions of that to disk, but for
+      the time being you have to be a little considerate to prevent
+      GNUsound from swallowing all available memory. One tool to help
+      with that is under the
+      <guimenu>Debug</guimenu> menu, where you can find the option
+      <guimenuitem>Destroy Undo</guimenuitem>. This destroys all
+      undo's, thus releasing all memory in use by the undo
+      buffers. Of course you should only use this option when you
+      don't need those undo's.</para>
+    </sect2>
+
+    <sect2 id="crash">
+      <title>Crash</title>
+      <para>If GNUsound crashes it will attempt to save data in open
+      and modified buffers. It tries to save that data to the file
+      <filename><replaceable>filename</replaceable>.crash</filename>.
+      No guarantees though -- if GNUsound crashes, it's because
+      something is seriously broken, and basically all bets are
+      off.</para>
+    </sect2>
+  </sect1>
+
+  <sect1 id="modules">
+    <title>Modules</title>
+    <para>This section briefly describes the various modules that come
+    with GNUsound. These modules are available via the
+    <guimenu>Tools</guimenu> menu. They all need an active
+    selection to operate on.</para>
+
+    <sect2 id="amplify">
+      <title>Amplify</title>
+
+      <para>This module amplifies or attenuates the signal. The
+      primary envelope determines by how much the signal is
+      attenuates.</para>
+    </sect2>
+
+    <sect2 id="amptreshold">
+      <title>Amplitude Treshold</title>
+        
+      <para>This module zeroes those parts of the signal that are
+      below a certain treshold for a given duration. The
+      <guibutton>Delete</guibutton> option toggles whether the
+      relevant section in the signal should be zeroed or deleted. The
+      <guibutton>Gang tracks</guibutton> option toggles whether each
+      track should be processed separately, or whether the
+      intersection from all selected tracks should be used. Finally
+      the <guibutton>Invert</guibutton> option inverts the meaning
+      of the operation, selecting noise rather than silence.</para>
+
+    </sect2>
+
+    <sect2 id="autozero">
+      <title>Auto Zero</title>
+        
+      <para>This module shrinks the selection to the nearest zero
+      points. This is mostly useful to prevent clicks in a looped
+      sample.</para>
+    </sect2>
+
+    <sect2 id="bandpass">
+      <title>Bandpass</title>
+        
+      <para>This module implements a very simple bandpass filter. It
+      was lifted from the sox audio tool distribution mostly as a
+      curiosity. Much better and more versatile filters are available
+      through the <link linkend="ladspa">LADSPA plugins</link> module.
+      </para>
+    </sect2>
+
+    <sect2 id="declip">
+      <title>Declip</title>
+        
+      <para>This module removes some digital clipping artifacts from
+      material that was recorded too loud. It is very stupid and does
+      not have any tricks up its sleeve whatsoever (not even
+      interpolation) but still I find it works rather well.</para>
+
+    </sect2>
+
+    <sect2 id="delay">
+      <title>Delay</title>
+        
+      <para>This module implements a simple digital delay. The
+      <guibutton>Duration</guibutton> parameter controls the
+      duration of each delay in the time units as given by the time
+      control bar. This parameter is controlled by the primary
+      envelope. The <guibutton>Times</guibutton> parameter controls
+      the number of delays. The <guibutton>Decay</guibutton>
+      parameters controls the rate of decay. This parameter is
+      controlled by the auxiliary envelope.</para>
+
+    </sect2>
+
+    <sect2 id="fadein">
+      <title>Fade In</title>
+        
+      <para>This module fades in the signal. The primary envelope
+      controls the attenuation factor.</para>
+    </sect2>
+
+    <sect2 id="fadeout">
+      <title>Fade Out</title>
+        
+      <para>This module fades out the signal. The primary envelope
+      controls the attenuation factor.</para>
+    </sect2>
+
+    <sect2 id="ladspa">
+      <title>LADSPA Plugins</title>
+        
+      <para>This module implements support for the Linux Audio
+      Developers Simple Plugin Architecture. You must install some
+      LADSPA plugins to use this module, these can be obtained from
+      <ulink
+      url="http://www.ladspa.org">http://www.ladspa.org</ulink>. Before
+      starting GNUsound make sure the
+      <systemitem>LADSPA_PATH</systemitem> environment variable points
+      to the location where your plugins are installed. If the
+      <systemitem>LADSPA_PATH</systemitem> is not defined then
+      GNUsound will search
+      <filename>/usr/local/lib/ladspa</filename> for plugins.</para>
+        
+      <para>The interface for this module consists of a window
+      that is split in two halves: the left half contains the 
+      available plugins, and the right half contains the parameters
+      for the selected plugin.</para>
+
+      <para>When the list of plugins is active, you can press a key
+      to jump to the first plugin whose name starts with that
+      letter.</para>
+
+      <para>The right half of the window has sliders
+      to set the parameters for the plugin. You can use the
+      <guibutton>Env1</guibutton> and <guibutton>Env2</guibutton>
+      buttons to assign a parameter to the corresponding envelope.
+      The envelope modifies the parameter value in the following way:
+      if the envelope value is 0, then the parameter value is the
+      parameter value set by the user. If the envelope value is
+      between 0 and 1, then the parameter value is between the user
+      selected parameter value and the maximum parameter
+      value. Finally if the envelope value is between 0 and -1, then
+      the parameter value is between the user selected parameter value
+      and the minimum parameter value. </para>
+
+      <para>An envelope assigned to a LADSPA parameter does not
+      change that parameter every sample; rather the signal is
+      processed in blocks and the envelope value applies to an entire
+      block. The size of these blocks can be changed in <link
+      linkend="configfile">the configuration file</link> (the
+      <systemitem>ladspa_segment_time</systemitem> parameter). The
+      default value for this parameter is 0.1 seconds.</para>
+    </sect2>
+
+    <sect2 id="lowpass">
+      <title>Lowpass</title>
+      <para>This module implements a very simple lowpass filter. It
+      was lifted from the web and is included mostly as a
+      curiosity. Much better and more versatile filters are available
+      through the <link linkend="ladspa">LADSPA plugins</link> module.</para>
+    </sect2>
+      
+    <sect2 id="mix">
+      <title>Mix</title>
+      <para>This module mixes the signal from the second selected
+      track into the first. The primary envelopes on the selected
+      tracks specify the contribution of each track to the final
+      signal.</para>
+    </sect2>
+
+    <sect2 id="normalize">
+      <title>Normalize</title>
+      <para>This module determines the peak amplitude of the selected
+      track(s) and proceeds to amplify the tracks so that the signal
+      amplitude is maximal. If you select a multiple tracks, then
+      the global peak for the selected tracks is used as a reference 
+      point. </para>
+    </sect2>
+
+    <sect2 id="resample">
+      <title>Resample</title>
+      <para>This module changes the sampling rate of the selected
+      audio. Depending on whether you have 
+      <ulink url="http://www.mega-nerd.com/SRC/">libsamplerate</ulink>
+      installed it offers one or more methods of doing so, with
+      varying quality/speed tradeoffs. The primary envelope controls
+      the rate.</para>
+    </sect2>
+
+    <sect2 id="reverse">
+      <title>Reverse</title>
+      <para>This module reverses the selected data.</para>
+    </sect2>
+      
+    <sect2 id="tonegen">
+      <title>Tone generator</title> 
+        
+      <para>This module implements a simple tone generator which can also be
+      used to generate silence. The primary envelope controls the
+      amplitude while the auxiliary envelope controls the
+      frequency.</para>
+    </sect2>
+  </sect1>
+
+  <sect1 id="reference">
+    <title>Reference</title>
+
+    <sect2 id="configfile">
+      <title>Configuration file</title>
+                    
+      <para>GNUsound stores its configuration information in a text file
+      in the location
+      <filename>~/.gnome/gnusound</filename>. Although some of the most
+      important properties that are stored in this file can be
+      edited from within GNUsound itself, this file also contains
+      other options that might be of interest. For example, it
+      contains the colors that GNUsound uses to draw various parts
+      of the interface. You can change these here if your aesthetic
+      sensibilities differ from those of the author. Some of the
+      more obscure options there may be documented in the
+      <filename>pref.c</filename> file.</para>
+
+      <para>It should be understood that editing the configuration
+      file in this fashion may yield unexpected results. Also there
+      is always a chance that the format of the file will change in
+      the future, as well as the meaning of the properties and their
+      values.</para>
+    </sect2>
+
+    <sect2 id="usxfile">
+      <title>.USX document settings file</title>
+      <para>GNUsound saves all it's files as standard .WAV
+      files. However not all of GNUsound's document settings can be
+      preserved in the .WAV file format. Rather than inventing yet
+      another sound file format, GNUsound saves the extra data alongside
+      the sound file in a text file with the extension .USX. This file
+      keeps track of the selection settings, markers, envelopes and
+      mixer settings. This file is fairly self-explanatory and it
+      doesn't hurt to edit it by hand. </para>  
+    </sect2>
+  </sect1>
+
+  <sect1 id="contact">
+    <title>Contact</title>
+    <para>Please address questions, bug reports, and suggestions to the
+    GNUsound mailing list: 
+    <email>gnusound-common@lists.sourceforge.net</email></para>
+
+    <para>For inquiries related to donations or other forms of sponsoring
+    please contact:
+    <email>a.haakmat@chello.nl</email></para>
+  </sect1>
+</article>

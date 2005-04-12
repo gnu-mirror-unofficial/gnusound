@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head xmlns="http://www.w3.org/1999/xhtml"><title xmlns="http://www.w3.org/1999/xhtml">Modules</title><meta xmlns="http://www.w3.org/1999/xhtml" name="generator" content="DocBook XSL Stylesheets V1.58.1"/><link rel="home" href="index.html" title="GNUsound manual"/><link rel="up" href="index.html" title="GNUsound manual"/><link rel="previous" href="ar01s02.html" title="Using GNUsound"/><link rel="next" href="ar01s04.html" title="Reference"/></head><body><div xmlns="http://www.w3.org/1999/xhtml" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Modules</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s02.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="ar01s04.html">Next</a></td></tr></table><hr/></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect1" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h2 class="title" style="clear: both"><a xmlns="http://www.w3.org/1999/xhtml" id="modules"/>Modules</h2></div></div><p xmlns="http://www.w3.org/1999/xhtml">This section briefly describes the various modules that come
+    with GNUsound. These modules are available via the
+    Tools menu. They all need an active
+    selection to operate on.</p><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="amplify"/>Amplify</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">This module amplifies or attenuates the signal. The
+      primary envelope determines by how much the signal is
+      attenuates.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="amptreshold"/>Amplitude Treshold</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">This module zeroes those parts of the signal that are
+      below a certain treshold for a given duration. The
+      Delete option toggles whether the
+      relevant section in the signal should be zeroed or deleted. The
+      Gang tracks option toggles whether each
+      track should be processed separately, or whether the
+      intersection from all selected tracks should be used. Finally
+      the Invert option inverts the meaning
+      of the operation, selecting noise rather than silence.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="autozero"/>Auto Zero</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">This module shrinks the selection to the nearest zero
+      points. This is mostly useful to prevent clicks in a looped
+      sample.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="bandpass"/>Bandpass</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">This module implements a very simple bandpass filter. It
+      was lifted from the sox audio tool distribution mostly as a
+      curiosity. Much better and more versatile filters are available
+      through the <a xmlns="http://www.w3.org/1999/xhtml" href="ar01s03.html#ladspa" title="LADSPA Plugins">LADSPA plugins</a> module.
+      </p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="declip"/>Declip</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">This module removes some digital clipping artifacts from
+      material that was recorded too loud. It is very stupid and does
+      not have any tricks up its sleeve whatsoever (not even
+      interpolation) but still I find it works rather well.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="delay"/>Delay</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">This module implements a simple digital delay. The
+      Duration parameter controls the
+      duration of each delay in the time units as given by the time
+      control bar. This parameter is controlled by the primary
+      envelope. The Times parameter controls
+      the number of delays. The Decay
+      parameters controls the rate of decay. This parameter is
+      controlled by the auxiliary envelope.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="fadein"/>Fade In</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">This module fades in the signal. The primary envelope
+      controls the attenuation factor.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="fadeout"/>Fade Out</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">This module fades out the signal. The primary envelope
+      controls the attenuation factor.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="ladspa"/>LADSPA Plugins</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">This module implements support for the Linux Audio
+      Developers Simple Plugin Architecture. You must install some
+      LADSPA plugins to use this module, these can be obtained from
+      <a xmlns="http://www.w3.org/1999/xhtml" href="http://www.ladspa.org" target="_top">http://www.ladspa.org</a>. Before
+      starting GNUsound make sure the
+      <tt xmlns="http://www.w3.org/1999/xhtml">LADSPA_PATH</tt> environment variable points
+      to the location where your plugins are installed. If the
+      <tt xmlns="http://www.w3.org/1999/xhtml">LADSPA_PATH</tt> is not defined then
+      GNUsound will search
+      <tt xmlns="http://www.w3.org/1999/xhtml">/usr/local/lib/ladspa</tt> for plugins.</p><p xmlns="http://www.w3.org/1999/xhtml">The interface for this module consists of a window
+      that is split in two halves: the left half contains the 
+      available plugins, and the right half contains the parameters
+      for the selected plugin.</p><p xmlns="http://www.w3.org/1999/xhtml">When the list of plugins is active, you can press a key
+      to jump to the first plugin whose name starts with that
+      letter.</p><p xmlns="http://www.w3.org/1999/xhtml">The right half of the window has sliders
+      to set the parameters for the plugin. You can use the
+      Env1 and Env2
+      buttons to assign a parameter to the corresponding envelope.
+      The envelope modifies the parameter value in the following way:
+      if the envelope value is 0, then the parameter value is the
+      parameter value set by the user. If the envelope value is
+      between 0 and 1, then the parameter value is between the user
+      selected parameter value and the maximum parameter
+      value. Finally if the envelope value is between 0 and -1, then
+      the parameter value is between the user selected parameter value
+      and the minimum parameter value. </p><p xmlns="http://www.w3.org/1999/xhtml">An envelope assigned to a LADSPA parameter does not
+      change that parameter every sample; rather the signal is
+      processed in blocks and the envelope value applies to an entire
+      block. The size of these blocks can be changed in <a xmlns="http://www.w3.org/1999/xhtml" href="ar01s04.html#configfile" title="Configuration file">the configuration file</a> (the
+      <tt xmlns="http://www.w3.org/1999/xhtml">ladspa_segment_time</tt> parameter). The
+      default value for this parameter is 0.1 seconds.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="lowpass"/>Lowpass</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">This module implements a very simple lowpass filter. It
+      was lifted from the web and is included mostly as a
+      curiosity. Much better and more versatile filters are available
+      through the <a xmlns="http://www.w3.org/1999/xhtml" href="ar01s03.html#ladspa" title="LADSPA Plugins">LADSPA plugins</a> module.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="mix"/>Mix</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">This module mixes the signal from the second selected
+      track into the first. The primary envelopes on the selected
+      tracks specify the contribution of each track to the final
+      signal.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="normalize"/>Normalize</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">This module determines the peak amplitude of the selected
+      track(s) and proceeds to amplify the tracks so that the signal
+      amplitude is maximal. If you select a multiple tracks, then
+      the global peak for the selected tracks is used as a reference 
+      point. </p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="resample"/>Resample</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">This module changes the sampling rate of the selected
+      audio. Depending on whether you have 
+      <a xmlns="http://www.w3.org/1999/xhtml" href="http://www.mega-nerd.com/SRC/" target="_top">libsamplerate</a>
+      installed it offers one or more methods of doing so, with
+      varying quality/speed tradeoffs. The primary envelope controls
+      the rate.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="reverse"/>Reverse</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">This module reverses the selected data.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="tonegen"/>Tone generator</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">This module implements a simple tone generator which can also be
+      used to generate silence. The primary envelope controls the
+      amplitude while the auxiliary envelope controls the
+      frequency.</p></div></div><div xmlns="http://www.w3.org/1999/xhtml" class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s02.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="ar01s04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Using GNUsound </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Reference</td></tr></table></div></body></html>

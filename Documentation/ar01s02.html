@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head xmlns="http://www.w3.org/1999/xhtml"><title xmlns="http://www.w3.org/1999/xhtml">Using GNUsound</title><meta xmlns="http://www.w3.org/1999/xhtml" name="generator" content="DocBook XSL Stylesheets V1.58.1"/><link rel="home" href="index.html" title="GNUsound manual"/><link rel="up" href="index.html" title="GNUsound manual"/><link rel="previous" href="index.html" title="GNUsound manual"/><link rel="next" href="ar01s03.html" title="Modules"/></head><body><div xmlns="http://www.w3.org/1999/xhtml" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Using GNUsound</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="index.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="ar01s03.html">Next</a></td></tr></table><hr/></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect1" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h2 class="title" style="clear: both"><a xmlns="http://www.w3.org/1999/xhtml" id="using"/>Using GNUsound</h2></div></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="installation"/>Installation</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">GNUsound can be installed with little pain on most GNOME 1
+      or GNOME 2 installations.</p><div xmlns="http://www.w3.org/1999/xhtml" class="sect3" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h4 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="prerequisites"/>Prerequisites</h4></div></div><p xmlns="http://www.w3.org/1999/xhtml">It is recommended/required that you install the
+        following software before compiling/installing GNUsound:</p><div xmlns="http://www.w3.org/1999/xhtml" class="itemizedlist"><ul type="disc"><li xmlns="http://www.w3.org/1999/xhtml"><p xmlns="http://www.w3.org/1999/xhtml">Linux &gt;= 2.4</p></li><li xmlns="http://www.w3.org/1999/xhtml"><p xmlns="http://www.w3.org/1999/xhtml">GNOME &gt;= 1.4</p></li><li xmlns="http://www.w3.org/1999/xhtml"><p xmlns="http://www.w3.org/1999/xhtml">libglade &gt;= 0.14</p></li><li xmlns="http://www.w3.org/1999/xhtml"><p xmlns="http://www.w3.org/1999/xhtml">libaudiofile &gt;= 0.2.3</p></li><li xmlns="http://www.w3.org/1999/xhtml"><p xmlns="http://www.w3.org/1999/xhtml">libsamplerate &gt;= 0.13</p></li><li xmlns="http://www.w3.org/1999/xhtml"><p xmlns="http://www.w3.org/1999/xhtml">OSS compatible sound driver</p></li></ul></div><p xmlns="http://www.w3.org/1999/xhtml">In addition, it is recommended that you use reasonably
+        fast hardware (say, a 500 MHz PIII) and install lots of RAM
+        (really).</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect3" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h4 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="installing-source"/>Installing from source</h4></div></div><p xmlns="http://www.w3.org/1999/xhtml">To install GNUsound from source try:</p><pre xmlns="http://www.w3.org/1999/xhtml" class="screen">
+<tt xmlns="http://www.w3.org/1999/xhtml">$</tt> <b xmlns="http://www.w3.org/1999/xhtml"><tt>./configure --enable-optimization</tt></b>
+<tt xmlns="http://www.w3.org/1999/xhtml">$</tt> <b xmlns="http://www.w3.org/1999/xhtml"><tt>make</tt></b>
+<tt xmlns="http://www.w3.org/1999/xhtml">$</tt> <b xmlns="http://www.w3.org/1999/xhtml"><tt>make install</tt></b>
+</pre><p>Don't forget that
+        </p><pre xmlns="http://www.w3.org/1999/xhtml" class="screen"><tt xmlns="http://www.w3.org/1999/xhtml">$</tt> <b xmlns="http://www.w3.org/1999/xhtml"><tt>./configure --help</tt></b></pre><p> 
+        shows further configuration
+        options. If you decide to uninstall GNUsound, you can issue
+        the command:</p><pre xmlns="http://www.w3.org/1999/xhtml" class="screen">
+<tt xmlns="http://www.w3.org/1999/xhtml">$</tt> <b xmlns="http://www.w3.org/1999/xhtml"><tt>make uninstall</tt></b>
+</pre><p xmlns="http://www.w3.org/1999/xhtml">Considerable effort has been expended trying to make
+        GNUsound compile and install flawlessly on many different
+        systems, but it is still possible that something doesn't work
+        for you. In that case, please <a xmlns="http://www.w3.org/1999/xhtml" href="ar01s05.html" title="Contact">report
+        it</a>.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect3" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h4 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="installing-binary"/>Installing from binary packages</h4></div></div><p xmlns="http://www.w3.org/1999/xhtml">Several people provide binary packages of GNUsound for a
+        number of distributions. These are available from <a xmlns="http://www.w3.org/1999/xhtml" href="http://awacs.dhs.org/software/gnusound" target="_top">the GNUsound
+        homepage</a>.</p></div></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="starting"/>Starting GNUsound</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">If installation has been successful, there should be a
+      GNUsound icon in your GNOME menus. Alternatively you can start
+      GNUsound from the command line:</p><pre xmlns="http://www.w3.org/1999/xhtml" class="screen">
+<tt xmlns="http://www.w3.org/1999/xhtml">$</tt> <b xmlns="http://www.w3.org/1999/xhtml"><tt>gnusound</tt></b>
+</pre><p xmlns="http://www.w3.org/1999/xhtml">This latter method is actually recommended (at least for
+      the time being), because GNUsound spews copious output to the
+      screen, including some error messages that haven't found a place
+      in the GUI yet (such as when GNUsound cannot open the audio
+      device).</p><p>If you run into problems, e.g. GNUsound won't start, or it
+      crashes immediately after startup, see the <a xmlns="http://www.w3.org/1999/xhtml" href="ar01s02.html#installation" title="Installation">installation section</a> and read the
+      output from 
+      </p><pre xmlns="http://www.w3.org/1999/xhtml" class="screen"><tt xmlns="http://www.w3.org/1999/xhtml">$ </tt><b xmlns="http://www.w3.org/1999/xhtml"><tt>./configure --help</tt></b></pre></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="loading"/>Loading files</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">GNUsound uses <tt xmlns="http://www.w3.org/1999/xhtml">libaudiofile</tt>,
+        which is a part of <tt xmlns="http://www.w3.org/1999/xhtml">GNOME</tt>, to provide
+        support for a number of popular audio file formats such as
+        .AIFF and .WAV.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="viewing"/>Viewing</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">One of the most important design goals of GNUsound is to
+        provide very fast waveform display, to prevent navigating
+        through the soundfile from becoming a chore and to avoid (or
+        postpone) the need for complicated navigation tools.</p><p xmlns="http://www.w3.org/1999/xhtml">The most important viewing tool is the zoom function. You
+        can zoom in and out using the PageUp and PageDown keys. If you
+        have a mousewheel, then you can also use the mousewheel to
+        zoom in and out.</p><p xmlns="http://www.w3.org/1999/xhtml">The View menu provides some options to
+        control the view, from preset zoom factors to
+        enabling/disabling grid display.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="selection"/>Selection</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">You can create a selection on a track by dragging the
+        mouse pointer over the region that you wish to select, or by
+        holding the SHIFT key and giving one of the movement commands
+        in the Select menu. You can select
+        multiple tracks by holding the CONTROL key while clicking on
+        the tracks that you want to select. If a track is already
+        selected, then this action deselects the given track. It is
+        also possible to select multiple tracks by issuing the
+        Track Up and Track
+        Down commands from the
+        Select menu.</p><p xmlns="http://www.w3.org/1999/xhtml">Changes to the selection are undoable, thus, if you make
+        a mistake which causes you to lose an important selection, you
+        can issue the Undo command to get
+        your selection back.</p><p xmlns="http://www.w3.org/1999/xhtml">A handy trick to temporarily save a selection that you
+        don't want to lose while you do some editing elsewhere is to
+        turn the current selection into a loop, then do your stuff,
+        and then to select the loop when you're done. Alternatively,
+        you can set cuepoints to demarcate the selection that you want
+        to save, then use
+        Snap to Cuepoints and the
+        Move Left and Move
+        Right commands to get your selection back.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="markers"/>Markers</h3></div></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect3" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h4 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="cuepoints"/>Cuepoints</h4></div></div><p xmlns="http://www.w3.org/1999/xhtml">Cuepoints are markers that you can attach to the
+          soundfile. By double-clicking on the little red triangle you
+          can change the label for a marker.</p><p xmlns="http://www.w3.org/1999/xhtml">You can create cuepoints by pressing M or by selecting
+          the corresponding option from the
+          Marker menu. If there is no
+          selection, this command creates a single marker at the
+          cursor position. If there is a selection, then this command
+          creates 2 markers, at the left and right positions of the
+          selection.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect3" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h4 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="envelopes"/>Envelopes</h4></div></div><p xmlns="http://www.w3.org/1999/xhtml">GNUsound is either in selection editing mode or in
+          envelope editing mode. You can switch between these modes by
+          toggling the Envelope Edit setting
+          under the Edit menu.  </p><p xmlns="http://www.w3.org/1999/xhtml">Once in envelope mode, you can click on a track to
+          create envelope handles. Clicking on the envelope handles
+          themselves allows you to move them around. GNUsound provides
+          two different envelopes for controlling two different
+          parameters: the primary and the auxiliary envelope. Holding
+          CONTROL while clicking on a track allows you to edit the
+          auxiliary envelope.</p><p xmlns="http://www.w3.org/1999/xhtml">Envelopes modify the behavior of the tools that you
+          apply to the selection. For example if you create a
+          selection, then draw an envelope across the selection that
+          slopes downward from the center, and then apply the
+          Amplify tool (from the
+          Tools menu), it will make the sound
+          softer. Thus, the envelope controls the gain parameter of
+          the Amplify tool. </p><p xmlns="http://www.w3.org/1999/xhtml">The exact effect of an envelope depends on the
+          selected tool; some tools don't have any parameters to
+          change, and the envelopes will have no effect. For other
+          tools, the primary envelope usually controls the first
+          parameter, and the auxiliary envelope controls the second
+          parameter. For yet other tools, it may be possible to
+          explicitly assign a parameter to one of the two
+          envelopes.</p><p xmlns="http://www.w3.org/1999/xhtml">It is possible to temporarily disable envelopes by
+          issuing the Show Envelopes
+          command. The envelopes will then become invisible and they
+          will no longer affect any tools that you use.</p></div></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="playback"/>Playback</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">GNUsound can playback as many tracks as your hardware can
+      handle. Every track can be mixed onto as many output channels as
+      desired, using the mixer level controls (the rainbow colored
+      things).</p><p xmlns="http://www.w3.org/1999/xhtml">GNUsound does not perform any implicit transformations of
+      the audio file on playback<sup xmlns="http://www.w3.org/1999/xhtml">[<a id="id2802574" href="#ftn.id2802574">2</a>]</sup>it just tries to open the audio
+      device with the same parameters as the audio file (number of
+      bits, sample rate) and starts playback. You should check
+      GNUsound's output for any warnings (e.g. when the device could
+      not be openend, or when the audio device can't support the
+      requested sample rate -- these warnings do not appear in the GUI
+      yet).</p><p xmlns="http://www.w3.org/1999/xhtml">GNUsound does not perform any checking on output clipping:
+      it is your responsibility to make sure you don't mix two
+      channels too loudly.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="record"/>Recording</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">GNUsound can record as many tracks simultaneously as
+      your hardware will bear. You do this by selecting the tracks
+      you wish to record on and issuing the
+      Record command.</p><p xmlns="http://www.w3.org/1999/xhtml">There is no relation between which tracks are selected
+      and which input channels are actually recorded except for the
+      number of channels: that is, if you select tracks 1 and 3 and
+      then start to record, track 1 will receive the first input
+      channel, and track 3 will receive the second input
+      channel.</p><p xmlns="http://www.w3.org/1999/xhtml">There is currently no way to explicitly control which
+      input channels GNUsound records from. GNUsound will always
+      incrementally assign the available input channels to the
+      selected tracks. If there is one selected track, GNUsound
+      records from the first available input channel, if there are
+      two selected tracks, GNUsound records from the first two input
+      channels, etcetera.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="saving"/>Saving files</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">You can issue the Save
+        command at almost any time. Files are saved in the
+        background and it is possible to perform almost any
+        operation during a file save, including playback (although
+        playback may stutter depending on your system
+        configuration). Files are always saved in the .WAV
+        format. Envelopes, cuepoints and other data are saved in a
+        <a xmlns="http://www.w3.org/1999/xhtml" href="ar01s04.html#usxfile" title=".USX document settings file"><i xmlns="http://www.w3.org/1999/xhtml"><tt>filename</tt></i>.usx
+        file</a>, in a fairly self-explanatory text
+        format.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="memory"/>Memory management</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">GNUsound currently stores all its data, including
+      clipboard and undo buffers, in memory. Ultimately some logic
+      will be implemented to offload portions of that to disk, but for
+      the time being you have to be a little considerate to prevent
+      GNUsound from swallowing all available memory. One tool to help
+      with that is under the
+      Debug menu, where you can find the option
+      Destroy Undo. This destroys all
+      undo's, thus releasing all memory in use by the undo
+      buffers. Of course you should only use this option when you
+      don't need those undo's.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="sect2" lang="en"><div xmlns="http://www.w3.org/1999/xhtml" class="titlepage"><div xmlns="http://www.w3.org/1999/xhtml"><h3 class="title"><a xmlns="http://www.w3.org/1999/xhtml" id="crash"/>Crash</h3></div></div><p xmlns="http://www.w3.org/1999/xhtml">If GNUsound crashes it will attempt to save data in open
+      and modified buffers. It tries to save that data to the file
+      <tt xmlns="http://www.w3.org/1999/xhtml"><i xmlns="http://www.w3.org/1999/xhtml"><tt>filename</tt></i>.crash</tt>.
+      No guarantees though -- if GNUsound crashes, it's because
+      something is seriously broken, and basically all bets are
+      off.</p></div><div xmlns="http://www.w3.org/1999/xhtml" class="footnotes"><br/><hr width="100" align="left"/><div xmlns="http://www.w3.org/1999/xhtml" class="footnote"><p xmlns="http://www.w3.org/1999/xhtml"><sup>[<a id="ftn.id2802574" href="#id2802574">2</a>] </sup>There is one
+      exception: GNUsound can convert signed 8 bit samples to unsigned
+      8 bit samples for drivers/devices that do not support signed 8
+      bit output. Whether GNUsound does this is controlled by the
+      playback_signed_int8_to_unsigned_int8 parameter in <a xmlns="http://www.w3.org/1999/xhtml" href="ar01s04.html#configfile" title="Configuration file">the configuration
+      file</a>.</p></div></div></div><div xmlns="http://www.w3.org/1999/xhtml" class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="index.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="ar01s03.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">GNUsound manual </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Modules</td></tr></table></div></body></html>
