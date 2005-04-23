@@ -1,6 +1,6 @@
 div { font-family: sans-serif; }
-a { font-family: sans-serif; color: #1d63e5 }
-a:visited { color: #e56d1d }
+a { font-family: sans-serif; color: #1d63e5; text-decoration: none }
+a:visited { color: #e56d1d; text-decoration: none }
 .banner { font-weight: bold; font-size: 64px; padding-bottom: 0em; position: absolute; top: 0px; left: 8px }
 .bannerimage { position: absolute; top: 16px; left: 16px; width: 542px; height: 140px; background-image: url("gradient.gif") }
 td { font-family: sans-serif }
