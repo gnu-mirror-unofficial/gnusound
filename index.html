@@ -1,171 +1,192 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="description" content="GNUsound">
-<meta name="keywords" content="linux, gnu, audio, gnusound, sound, sound editor">
-<title>GNUsound</title>
-<link href="gnusound.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<div class="bannerimage"></div>
-<div class="banner"><img alt="Mackie mixer detail" src="mixerknopjes.jpg">GNUsound</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta content="text/html; charset=iso-8859-1"><!-- design by Benjamin Henrion <bh_at_udev_dot_org> http://bh.udev.org
+       and Peter Gerwinski <peter_at_gerwinski_dot_de> http://www.peter.gerwinski.de --><title>STOP Software Patents in the EU!</title>
+  
+  
+  <style type="text/css">
+   body {
+         background: yellow;
+         font-family: Arial, Helvetica, sans-serif;
+   }
+   h1 {
+         color: darkblue;
+         font-size: 64px;
+         margin-top: 0.2em;
+         margin-bottom: 0em;
+         margin-left: 5%;
+         margin-right: 5%;
+         text-align: center;
+   }
+   a {
+         color: darkblue;
+         font-weight: bold;
+         outline: none;
+         text-decoration: underline;
+   }
+   a:hover {
+         color: blue;
+         text-decoration: underline;
+   }
+   #content {
+         background: #d7e0ff;
+         padding: 1em;
+         border: 2px solid darkblue;
+         margin-top: 2%;
+         margin-bottom: 2%;
+         margin-left: 15%;
+         margin-right: 15%;
+         font-size: 15px;
+   }
+   #mainmsg {
+         padding: 1em 1em;
+         margin: 10px;
+         border: 1px dashed darkblue;
+         background: white;
+         font-size: 17px;
+         font-weight: bold;
+   }
+   #textbox1 {
+	 width: 40%;
+	 float: right;
+         background: white;
+         padding: 0em 1em;
+         margin: 10px;
+         border: 1px dashed darkblue;
+         font-size: 13px;
+   }
+   #textbox1 a {
+	 font-weight: normal;
+   }
+   #textbox1 ul {
+	 padding-bottom: none;
+	 padding-left: 10px;
+   }
+   #textbox1 li {
+	 margin-bottom: 10px;
+   }
+   #textbox2 {
+	 width: 90%;
+         background: white;
+         padding: 0em 1em;
+         margin: 30px 10px;
+         border: 1px dashed darkblue;
+         font-size: 13px;
+   }
+   #textbox2 a {
+	 font-weight: normal;
+   }
+   #footer {
+         font-style: italic;
+         font-size: 13px;
+         text-align: center;
+   }
+   #footer a {
+         border: none;
+   }
+   .big {
+         color: darkblue;
+	 font-size: 22px;
+	 font-weight: bold;
+   }
+   .clock {
+	 background-color: #A6A98D;
+	 color: black;
+	 font-family: verdana;
+	 float: center;
+	 border: 1px solid black;
+	 border-collapse: collapse;
+    }
+    .time {
+	 fontsize: 50;
+    }
+    .clock TD {
+	 border: 1px solid black;
+	 border-collapse: collapse;
+	 text-position: center;
+    }
+    b {color:black}
+  </style>
 
-<table border="0" class="spine" cellpadding="0" cellspacing="0">
+<script language="JavaScript" type="text/javascript">
+function time() {
+    var today = new Date();
+    var deadline = new Date( 2005, 6, 6, 12, 0, 0);
+    var difdate = new Date(deadline.getTime() - today.getTime());
+    var seconds_left = parseInt(difdate.getTime() / 1000);
+    var minutes_left = parseInt(seconds_left / 60);
+    var hours_left = parseInt(minutes_left / 60);
+    var days_left = parseInt(hours_left / 24);
+//    var millisecs_left = difdate % 1000;
+//    if (millisecs_left < 10) { millisecs_left = "00" + millisecs_left; }
+//    else if (millisecs_left < 100) { millisecs_left = "0" + millisecs_left; }
+    seconds_left = seconds_left % 60;
+//    if (seconds_left < 10) { seconds_left = "0" + seconds_left; }
+    minutes_left = minutes_left % 60;
+//    if (minutes_left < 10) { minutes_left = "0" + minutes_left; }
+    hours_left = hours_left % 24;
+//    if (hours_left < 10) { hours_left = "0" + hours_left; }
+    document.getElementById("days-left").innerHTML = days_left;
+    document.getElementById("hours-left").innerHTML = hours_left;
+    document.getElementById("minutes-left").innerHTML = minutes_left;
+    document.getElementById("seconds-left").innerHTML = seconds_left;
+//    document.getElementById("millisecs-left").innerHTML = millisecs_left;
+    clocktime=setTimeout("time()", "100");
+}
+</script></head>
 
-<tr>
-<td valign="top" class="heading">About</td>
-<td valign="top" class="text">
-GNUsound is a multitrack sound editor for GNOME 1 and 2.
-</td>
-</tr>
-
-<tr>
-<td valign="top" class="heading">Download</td>
-<td valign="top" class="text">
-
-The current version is <a
-href="ftp://ftp.gnu.org/gnu/gnusound/gnusound-0.7.2.tar.bz2">0.7.2</a>
-(<a href="http://awacs.dhs.org/software/gnusound/source">older versions</a>),
-which was released 18 June 2005. Packages are available for:<br>
-<a
-href="https://www.duckcorp.org/dc/projects/pkg-gnusound/">Debian</a>, 
-provided by Duck.<br> <a
-href="http://ftp.gwdg.de/pub/linux/suse/apt/SuSE/9.2-i386/RPMS.suser-oc2pus/">SuSE
-9.2</a>, provided by Toni.<br>
-<a
-href="http://home.arcor.de/mmuellerss/fc3asaf/">Fedora Core 3</a>, 
-provided by Mario Mueller.<br>
-<a
-href="http://home.arcor.de/mmuellerss/fc4asaf/">Fedora Core 4</a>, 
-provided by Mario Mueller.
-
-
-<!-- There is no CVS repository for GNUsound.-->
-</td>
-</tr>
-
-<tr>
-<td valign="top" class="heading">Documentation</td>
-<td valign="top" class="text">
-<a href="Documentation">Read the documentation</a> for installation instructions, usage guide, and FAQs.
-</td>
-</tr>
-
-<tr>
-<td valign="top" class="heading">Screenshots</td>
-<td valign="top" class="text">
-
-<table border="0" cellpadding="0" cellspacing="0">
-<tr>
-<td class="screenshot"><a href="screenshots/0.7.png"
-target="screenshot"><img alt="screenshot" src="screenshots/0.7-small.png"></a></td>
-</tr>
-<tr>
-<td class="screenshot_caption">0.7</td>
-</tr>
-</table>
-
-</td>
-</tr>
-
-<tr>
-<td valign="top" class="heading">Support</td>
-<td valign="top" class="text">
-
-Please send all questions and suggestions to the mailing list: <a href="mailto:gnusound-common&#64;lists.sf.net">&lt;gnusound-common&#64;lists.sf.net&gt;</a> (<a
-href="http://lists.sourceforge.net/lists/listinfo/gnusound-common">subscribe,
-archives</a>).
-
-</td>
-</tr>
-
-<tr>
-<td valign="top" class="heading">See also</td>
-<td valign="top" class="text">
-
-<a href="http://www.ladspa.org"><abbr title="GNU/Linux Audio Developers
-Simple Plugin Architecture">GLADSPA</abbr></a> audio plugins, 
-<a href="http://www.mega-nerd.com/SRC"><abbr title="Secret Rabbit Code (aka
-libsamplerate)">SRC</abbr></a>, 
-<a href="http://www.mega-nerd.com/libsndfile">libsndfile</a>, 
-<a href="http://mp3dev.org"><abbr title="LAME Ain't an Mp3 Encoder">LAME</abbr></a>, 
-<a href="http://flac.sourceforge.net"><abbr title="Free Lossless Audio
-Codec">FLAC</abbr></a>, 
-<a href="http://ffmpeg.sourceforge.net">FFmpeg</a>,
-<a href="http://gmerlin.sourceforge.net">gmerlin</a>,
-<a href="http://jackit.sf.net"><abbr title="Jack Audio Connection
-Kit">JACK</abbr></a> audio server, 
-<a href="http://www.jacklab.net">JackLab</a>.
-
-</td>
-</tr>
-
-<tr>
-<td valign="top" class="heading">Devlog</td>
-<td valign="top" class="text">
-Ramblings, plans, and status reports in <a href="http://awacs.dhs.org/software/gnusound/weblog.php">the development weblog</a>.
-</td>
-</tr>
-
-<tr>
-<td valign="top" class="heading">&nbsp;</td>
-<td valign="top" class="text">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<div>
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="image"
-src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" border="0"
-name="submit" alt="Make payments with PayPal - it's fast, free and
-secure!">
-<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----
-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
-gU6faW77pEln50U=
------END PKCS7-----
-">
-</div>
-</form>
-</td>
-</tr>
-</table>
-</body>
-</html>
-
-
+ <body onload="time()">
+  <h1>STOP Software&nbsp;Patents!</h1>
+  <div id="content">
+   <p id="mainmsg">
+    We are asking our representatives in the European Parliament to
+    save Europe from software patents by following the
+    <a href="http://europarl.ffii.org/amendments.en.html">Buzek-Rocard-Duff amendments</a>.
+   </p>
+   <p>
+    The Software Patents Directive, as approved by the European
+    Council of Ministers, would <strong>legalise US-style Software
+    Patents</strong> in the European Union.
+   </p>
+   <div id="textbox1">
+    <p><strong>
+     How you can help
+    </strong></p>
+    <ul>
+     <li>
+      Join <a href="http://noepatents.eu.org/">this web demo</a>.
+     </li>
+     <li>
+      Join <a href="http://www.economic-majority.com/">economic-majority.com</a>.
+     </li>
+     <li>
+      Join the <a href="http://noepatents.eu.org/index.php/StbDemo050604">demonstration in Strasbourg</a>.
+     </li>
+    </ul>
+   </div>
+   <p>
+    If that happens, software developers will no longer own what
+    they write and can be sued for selling or distributing
+    <strong>their own software</strong>.
+    This would not only endanger <em>your</em> job, but the entire
+    European software sector.
+   </p>
+   <p>
+    On Wed the 6<sup>th</sup> of July, 
+    <span id="days-left" class="big">5</span> days and
+    <span id="hours-left" class="big">5</span>h
+    <span id="minutes-left" class="big">5</span>m
+    <span id="seconds-left" class="big">5</span>s
+    from now,
+    the European Parliament will have the last
+    chance to prevent this. To do so, 367 of the 732 members must
+    be <strong>present</strong> and
+    <strong>vote for the right amendments</strong>.
+   </p>
+   </div>
+  <p id="footer">
+   When you have done your part:<br>
+   <!-- In the href="..." below, put a link to your webpage index. -->
+   <a href="index.orig.html">Click here to enter the site &gt;&gt;</a>
+  </p>
+ </body></html>
