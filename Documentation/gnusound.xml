@@ -15,6 +15,9 @@
       <year>2003</year>
       <year>2004</year>
       <year>2005</year>
+      <year>2006</year>
+      <year>2007</year>
+      <year>2008</year>
       <holder>Pascal Haakmat</holder>
     </copyright>
     <revhistory>
@@ -41,6 +44,18 @@
         <date>February 2005</date>
         <authorinitials>ph</authorinitials>
         <revremark>Updates (GNUsound 0.7 release).</revremark>
+      </revision>
+      <revision>
+        <revnumber>3</revnumber>
+        <date>June 2005</date>
+        <authorinitials>ph</authorinitials>
+        <revremark>Updates (GNUsound 0.7.2 release).</revremark>
+      </revision>
+      <revision>
+        <revnumber>4</revnumber>
+        <date>July 2008</date>
+        <authorinitials>ph</authorinitials>
+        <revremark>Updates (GNUsound 0.7.5 release).</revremark>
       </revision>
     </revhistory>
   </articleinfo>
@@ -121,6 +136,8 @@
           url="http://mp3dev.org/">LAME (libmp3lame)</ulink></para></listitem>
           <listitem><para><ulink
           url="http://flac.sourceforge.net/">FLAC (libFLAC)</ulink></para></listitem>
+          <listitem><para><ulink
+          url="http://gmerlin.sourceforge.net/">gmerlin</ulink></para></listitem>
         </itemizedlist>
       </sect3>
 
@@ -152,6 +169,7 @@
 
         <screen>
 <prompt>$</prompt> <userinput>make</userinput>
+<prompt>$</prompt> <userinput>make modules</userinput>
 <prompt>$</prompt> <userinput>make install</userinput>
 </screen>
         
@@ -182,7 +200,7 @@
         
         <para>Several people provide binary packages of GNUsound for a
         number of distributions. These are available from <ulink
-        url="http://awacs.dhs.org/software/gnusound">the GNUsound
+        url="http://www.gnu.org/software/gnusound">the GNUsound
         homepage</ulink>.</para>
         
       </sect3>
@@ -932,7 +950,20 @@
         <para>For supported file formats see <ulink url="http://www.mega-nerd.com/libsndfile/#Features">the libsndfile documentation</ulink>.</para>
 
       </sect3>
-         
+
+      <sect3 id="file_gmerlin_avdec">
+
+        <title>file_gmerlin_avdec: gmerlin support</title>
+        <para>This module provides support for loading 
+        a variety of audio formats through gmerlin. Most notably 
+        gmerlin can read AAC and Musepack formats.</para>
+
+        <para>gmerlin is available from: <ulink url="http://gmerlin.sourceforge.net">http://gmerlin.sourceforge.net</ulink></para>
+
+        <para>For supported file formats see <ulink url="http://gmerlin.sourceforge.net/avdec_frame.html">the gmerlin documentation</ulink>.</para>
+
+      </sect3>
+
     </sect2>
   </sect1>
 
