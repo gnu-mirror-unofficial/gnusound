@@ -226,7 +226,7 @@
       <title>Opening a file</title>
 
       <para>You can open audio files through the
-      <guimenuitem>File->Open</guimenuitem> menu item, or by
+      <guimenuitem>File&rarr;Open</guimenuitem> menu item, or by
       specifying them on the GNUsound commandline. GNUsound will
       automatically determine the filetype and load the file into
       memory. See <link linkend="modules_file">File format
@@ -248,19 +248,19 @@
       waveform RMS ("power"). Calculating the RMS slows down waveform
       drawing, however, so for maximum performance you might want to
       turn it off in by unchecking
-      <guimenuitem>Settings->Preferences->View->Show waveform
+      <guimenuitem>Settings&rarr;Preferences&rarr;View&rarr;Show waveform
       RMS</guimenuitem>.</para>
 
-      <para>You can use <guimenuitem>View->Zoom In</guimenuitem> and
-      <guimenuitem>View->Zoom Out</guimenuitem> to zoom in and out of
+      <para>You can use <guimenuitem>View&rarr;Zoom In</guimenuitem> and
+      <guimenuitem>View&rarr;Zoom Out</guimenuitem> to zoom in and out of
       the waveform. The mouse wheel can also be used for this
-      purpose. <guimenuitem>View->Smaller</guimenuitem> and
-      <guimenuitem>View->Bigger</guimenuitem> stretch or compress the
+      purpose. <guimenuitem>View&rarr;Smaller</guimenuitem> and
+      <guimenuitem>View&rarr;Bigger</guimenuitem> stretch or compress the
       waveform vertically.</para>
 
       <para>When GNUsound is not playing or recording, the
-      <guimenuitem>Play/Record->Scrub Left</guimenuitem> and
-      <guimenuitem>Play/Record->Scrub Right</guimenuitem> scroll the
+      <guimenuitem>Play/Record&rarr;Scrub Left</guimenuitem> and
+      <guimenuitem>Play/Record&rarr;Scrub Right</guimenuitem> scroll the
       waveform to the left or to the right respectively. The Fast
       variants do the same, but to a greater degree (the <link
       linkend="pref:scrub_fast_multiplier">scrub_fast_multiplier</link>
@@ -286,24 +286,24 @@
         key while clicking on the tracks that you want to select. If a
         track is already selected, then this action deselects the
         given track. Alternatively, you can hold SHIFT and use the
-        <guimenuitem>Select->Track Up</guimenuitem> and
-        <guimenuitem>Select->Track Down</guimenuitem> commands.</para>
+        <guimenuitem>Select&rarr;Track Up</guimenuitem> and
+        <guimenuitem>Select&rarr;Track Down</guimenuitem> commands.</para>
         
         <para>Changes to the selection are undoable. If you make a
         mistake which causes you to lose an important selection, you
-        can issue the <guimenuitem>Edit->Undo</guimenuitem> command to get
+        can issue the <guimenuitem>Edit&rarr;Undo</guimenuitem> command to get
         your selection back.</para>
         
         <para>A handy trick to temporarily save a selection that you
         don't want to lose while you do some editing elsewhere is to
         turn the current selection into a loop using
-        <guimenuitem>Select->Selection To Loop</guimenuitem>, then do
+        <guimenuitem>Select&rarr;Selection To Loop</guimenuitem>, then do
         your stuff, and then to select the loop when you're
         done. Alternatively, you can set cuepoints to demarcate the
         selection that you want to save, then use
-        <guimenuitem>Select->Snap to Cuepoints</guimenuitem> and the
-        <guimenuitem>Select->Move Left</guimenuitem> and
-        <guimenuitem>Select->Move Right</guimenuitem> commands to get
+        <guimenuitem>Select&rarr;Snap to Cuepoints</guimenuitem> and the
+        <guimenuitem>Select&rarr;Move Left</guimenuitem> and
+        <guimenuitem>Select&rarr;Move Right</guimenuitem> commands to get
         your selection back.</para>
         
       </sect3>
@@ -316,7 +316,7 @@
 
         <para>Cuepoints are like bookmarks. You can use them to mark
         important points in the sound file. By enabling
-        <guimenuitem>Select->Snap To Cuepoints</guimenuitem> you can
+        <guimenuitem>Select&rarr;Snap To Cuepoints</guimenuitem> you can
         snap the selection to cuepoints.</para>
 
         <para>Envelopes modify the effect of some processing
@@ -332,7 +332,7 @@
           <para>You can create cuepoints by using the third mouse
           button when the Marker tool is active. Alternatively you can
           create them at any time by issuing
-          <guimenuitem>Markers->Insert Cuepoint</guimenuitem>. This
+          <guimenuitem>Markers&rarr;Insert Cuepoint</guimenuitem>. This
           command creates a single marker at the cursor position. If
           there is a selection, then this command creates 2 markers at
           the left and right positions of the selection.</para>
@@ -370,7 +370,7 @@
           envelopes.</para>
           
           <para>It is possible to temporarily disable envelopes by
-          issuing the <guimenuitem>View->Show Envelopes</guimenuitem>
+          issuing the <guimenuitem>View&rarr;Show Envelopes</guimenuitem>
           command. The envelopes will then become invisible and they
           will no longer affect any tools that you use.</para>
         </sect4>
@@ -392,8 +392,8 @@
         wayward samples, or even to achieve some interesting effects,
         the Pencil Tool's resolution is limited to the amplitude
         display resolution (which is controlled by
-        <guimenuitem>View->Smaller</guimenuitem> and
-        <guimenuitem>View->Bigger</guimenuitem>). Since the maximum
+        <guimenuitem>View&rarr;Smaller</guimenuitem> and
+        <guimenuitem>View&rarr;Bigger</guimenuitem>). Since the maximum
         amplitude display resolution is 256, this means that samples
         touched by the Pencil Tool have an 8 bit resolution at best
         (i.e. at the highest amplitude display resolution). For
@@ -427,7 +427,7 @@
       <para>GNUsound can playback as many tracks as your hardware can
       handle. You can specify the number of output channels to use in
       the
-      <guimenuitem>Settings->Preferences->Playback/Record</guimenuitem>.
+      <guimenuitem>Settings&rarr;Preferences&rarr;Playback/Record</guimenuitem>.
       Every track can be mixed onto as many output channels as
       desired, using the mixer level controls (the rainbow colored
       horizontal bars to the left of each audio track).</para>
@@ -475,7 +475,7 @@
       <title>Saving files</title>
       
       <para>You can save your work by issuing the
-        <guimenuitem>File->Save</guimenuitem> command. Note that
+        <guimenuitem>File&rarr;Save</guimenuitem> command. Note that
         GNUsound does not preserve auxiliary info (such as loop points
         or instrument definitions) that may be embedded in an audio
         file. If you open a file containing such information and
@@ -493,7 +493,7 @@
         <title>Mixdown</title>
         
         <para>Another way to save files is through the
-          <guimenuitem>File->Mixdown</guimenuitem> command. Mixdown
+          <guimenuitem>File&rarr;Mixdown</guimenuitem> command. Mixdown
           "plays back" to disk, that is, it will write a file to disk
           which is virtually identical to the data written to the
           audio device. You just have to specify which output channels

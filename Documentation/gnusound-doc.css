@@ -1,6 +1,21 @@
+body
+{
+        background-image: url("gradient.jpg");
+        background-repeat: repeat-x; 
+}
+
+hr
+{
+        color: #555555;
+        background-color: #555555;
+        height: 1px;
+        border: 0px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+}
+
 div
 {
-        text-size: 11px;
         font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -30,11 +45,26 @@ div
         margin-right: auto;
 }
 
+.navheader a
+{
+        color: black;
+}
+
+.navfooter a
+{
+        color: black;
+}
+
 .article
 {
         width: 600px;
         margin-left: auto;      
         margin-right: auto;
+}
+
+.guimenuitem
+{
+        font-style: italic;
 }
 
 h2
@@ -50,10 +80,10 @@ h3
 
 h4
 {
-        color: #999999;
+        color: #777777;
 }
 
 h5
 {
-        color: #999999;
+        color: #777777;
 }

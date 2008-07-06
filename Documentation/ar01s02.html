@@ -45,7 +45,7 @@
 </pre><p>This latter method is actually recommended at this time,
       because GNUsound's output can help to resolve any issues you may
       encounter. </p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="opening"></a>Opening a file</h3></div></div></div><p>You can open audio files through the
-      <span class="guimenuitem">File-&gt;Open</span> menu item, or by
+      <span class="guimenuitem">File→Open</span> menu item, or by
       specifying them on the GNUsound commandline. GNUsound will
       automatically determine the filetype and load the file into
       memory. See <a class="link" href="ar01s03.html#modules_file" title="File format support">File format
@@ -58,15 +58,15 @@
       waveform RMS ("power"). Calculating the RMS slows down waveform
       drawing, however, so for maximum performance you might want to
       turn it off in by unchecking
-      <span class="guimenuitem">Settings-&gt;Preferences-&gt;View-&gt;Show waveform
-      RMS</span>.</p><p>You can use <span class="guimenuitem">View-&gt;Zoom In</span> and
-      <span class="guimenuitem">View-&gt;Zoom Out</span> to zoom in and out of
+      <span class="guimenuitem">Settings→Preferences→View→Show waveform
+      RMS</span>.</p><p>You can use <span class="guimenuitem">View→Zoom In</span> and
+      <span class="guimenuitem">View→Zoom Out</span> to zoom in and out of
       the waveform. The mouse wheel can also be used for this
-      purpose. <span class="guimenuitem">View-&gt;Smaller</span> and
-      <span class="guimenuitem">View-&gt;Bigger</span> stretch or compress the
+      purpose. <span class="guimenuitem">View→Smaller</span> and
+      <span class="guimenuitem">View→Bigger</span> stretch or compress the
       waveform vertically.</p><p>When GNUsound is not playing or recording, the
-      <span class="guimenuitem">Play/Record-&gt;Scrub Left</span> and
-      <span class="guimenuitem">Play/Record-&gt;Scrub Right</span> scroll the
+      <span class="guimenuitem">Play/Record→Scrub Left</span> and
+      <span class="guimenuitem">Play/Record→Scrub Right</span> scroll the
       waveform to the left or to the right respectively. The Fast
       variants do the same, but to a greater degree (the <a class="link" href="ar01s04.html#pref:scrub_fast_multiplier">scrub_fast_multiplier</a>
       preference controls by how much).</p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="tools"></a>Tools</h3></div></div></div><div class="sect3" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="tool:selection"></a>Selection Tool</h4></div></div></div><p>The Selection Tool allows you to select a part of the
@@ -78,31 +78,31 @@
         key while clicking on the tracks that you want to select. If a
         track is already selected, then this action deselects the
         given track. Alternatively, you can hold SHIFT and use the
-        <span class="guimenuitem">Select-&gt;Track Up</span> and
-        <span class="guimenuitem">Select-&gt;Track Down</span> commands.</p><p>Changes to the selection are undoable. If you make a
+        <span class="guimenuitem">Select→Track Up</span> and
+        <span class="guimenuitem">Select→Track Down</span> commands.</p><p>Changes to the selection are undoable. If you make a
         mistake which causes you to lose an important selection, you
-        can issue the <span class="guimenuitem">Edit-&gt;Undo</span> command to get
+        can issue the <span class="guimenuitem">Edit→Undo</span> command to get
         your selection back.</p><p>A handy trick to temporarily save a selection that you
         don't want to lose while you do some editing elsewhere is to
         turn the current selection into a loop using
-        <span class="guimenuitem">Select-&gt;Selection To Loop</span>, then do
+        <span class="guimenuitem">Select→Selection To Loop</span>, then do
         your stuff, and then to select the loop when you're
         done. Alternatively, you can set cuepoints to demarcate the
         selection that you want to save, then use
-        <span class="guimenuitem">Select-&gt;Snap to Cuepoints</span> and the
-        <span class="guimenuitem">Select-&gt;Move Left</span> and
-        <span class="guimenuitem">Select-&gt;Move Right</span> commands to get
+        <span class="guimenuitem">Select→Snap to Cuepoints</span> and the
+        <span class="guimenuitem">Select→Move Left</span> and
+        <span class="guimenuitem">Select→Move Right</span> commands to get
         your selection back.</p></div><div class="sect3" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="tool:marker"></a>Marker Tool</h4></div></div></div><p>The Marker Tool allows you to manipulate cuepoints and
         envelopes.</p><p>Cuepoints are like bookmarks. You can use them to mark
         important points in the sound file. By enabling
-        <span class="guimenuitem">Select-&gt;Snap To Cuepoints</span> you can
+        <span class="guimenuitem">Select→Snap To Cuepoints</span> you can
         snap the selection to cuepoints.</p><p>Envelopes modify the effect of some processing
         operations. The precise meaning depends on the
         operation.</p><div class="sect4" lang="en" xml:lang="en"><div class="titlepage"><div><div><h5 class="title"><a id="cuepoints"></a>Cuepoints</h5></div></div></div><p>Cuepoints appear as little red triangles with a
           flagpole and a label attached to them. </p><p>You can create cuepoints by using the third mouse
           button when the Marker tool is active. Alternatively you can
           create them at any time by issuing
-          <span class="guimenuitem">Markers-&gt;Insert Cuepoint</span>. This
+          <span class="guimenuitem">Markers→Insert Cuepoint</span>. This
           command creates a single marker at the cursor position. If
           there is a selection, then this command creates 2 markers at
           the left and right positions of the selection.</p><p>If the Marker Tool is active, you can move cuepoints
@@ -124,7 +124,7 @@
           parameter. For yet other operations, it may be possible to
           explicitly assign a parameter to one of the two
           envelopes.</p><p>It is possible to temporarily disable envelopes by
-          issuing the <span class="guimenuitem">View-&gt;Show Envelopes</span>
+          issuing the <span class="guimenuitem">View→Show Envelopes</span>
           command. The envelopes will then become invisible and they
           will no longer affect any tools that you use.</p></div></div><div class="sect3" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="tool:pencil"></a>Pencil Tool</h4></div></div></div><p>The Pencil Tool allows you to perform sample-accurate
         waveform manipulation.</p><p>When the Pencil Tool is active, you can click and drag
@@ -134,8 +134,8 @@
         wayward samples, or even to achieve some interesting effects,
         the Pencil Tool's resolution is limited to the amplitude
         display resolution (which is controlled by
-        <span class="guimenuitem">View-&gt;Smaller</span> and
-        <span class="guimenuitem">View-&gt;Bigger</span>). Since the maximum
+        <span class="guimenuitem">View→Smaller</span> and
+        <span class="guimenuitem">View→Bigger</span>). Since the maximum
         amplitude display resolution is 256, this means that samples
         touched by the Pencil Tool have an 8 bit resolution at best
         (i.e. at the highest amplitude display resolution). For
@@ -148,12 +148,12 @@
         or the markers, or any combination of these.</p></div></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="playback"></a>Playback</h3></div></div></div><p>GNUsound can playback as many tracks as your hardware can
       handle. You can specify the number of output channels to use in
       the
-      <span class="guimenuitem">Settings-&gt;Preferences-&gt;Playback/Record</span>.
+      <span class="guimenuitem">Settings→Preferences→Playback/Record</span>.
       Every track can be mixed onto as many output channels as
       desired, using the mixer level controls (the rainbow colored
       horizontal bars to the left of each audio track).</p><p>GNUsound does not usually perform any implicit
       transformations of the audio format during
-      playback<sup>[<a id="id2570077" href="#ftn.id2570077" class="footnote">1</a>]</sup>; it just tries to open the audio device
+      playback<sup>[<a id="id2570080" href="#ftn.id2570080" class="footnote">1</a>]</sup>; it just tries to open the audio device
       with the same parameters as the audio file (number of bits,
       sample rate) and starts playback. An error will occur (or in
       some rare cases garbled noise will be played back) if the device
@@ -174,7 +174,7 @@
       records from the first available input channel, if there are
       two selected tracks, GNUsound records from the first two input
       channels, etcetera.</p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="saving"></a>Saving files</h3></div></div></div><p>You can save your work by issuing the
-        <span class="guimenuitem">File-&gt;Save</span> command. Note that
+        <span class="guimenuitem">File→Save</span> command. Note that
         GNUsound does not preserve auxiliary info (such as loop points
         or instrument definitions) that may be embedded in an audio
         file. If you open a file containing such information and
@@ -184,7 +184,7 @@
         <a class="link" href="ar01s04.html#usxfile" title=".USX document settings file"><em class="replaceable"><code>filename</code></em>.usx
         file</a>, in a fairly self-explanatory text
         format.</p><div class="sect3" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="mixdown"></a>Mixdown</h4></div></div></div><p>Another way to save files is through the
-          <span class="guimenuitem">File-&gt;Mixdown</span> command. Mixdown
+          <span class="guimenuitem">File→Mixdown</span> command. Mixdown
           "plays back" to disk, that is, it will write a file to disk
           which is virtually identical to the data written to the
           audio device. You just have to specify which output channels
@@ -219,7 +219,7 @@
       event of a crash.</p><p>If GNUsound crashes, please <a class="link" href="ar01s06.html" title="How to report bugs">report
       it</a>. Diagnostics which may be helpful in tracking down the
       problem are written to the file
-      <code class="filename">~/.gnusound/gnusound.log</code>.</p></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id2570077" href="#id2570077" class="para">1</a>] </sup>Although this depends on the selected
+      <code class="filename">~/.gnusound/gnusound.log</code>.</p></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id2570080" href="#id2570080" class="para">1</a>] </sup>Although this depends on the selected
       audio driver; for example, the JACK driver will always convert
       audio data to the floating point format required by
       JACK.</p></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="index.html">Prev</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="ar01s03.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">GNUsound manual </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Modules</td></tr></table></div></body></html>
